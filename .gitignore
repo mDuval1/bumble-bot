@@ -2,3 +2,5 @@ profiles/
 model/
 .ipynb_checkpoints/
 ml.ipynb
+.DS_Store
+__pycache__/
