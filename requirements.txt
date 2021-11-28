@@ -1,0 +1,6 @@
+click
+selenium
+tensorflow
+numpy
+tensorflow_datasets
+Pillow
