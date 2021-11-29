@@ -9,15 +9,20 @@ from selenium.webdriver.common.keys import Keys
 import tensorflow as tf
 
 from train import model_path, IMG_SIZE
-from scraper import save_profile_info, get_tmp_path, DATA_FOLDER
+from scraper import save_profile_info, get_tmp_path, DATA_FOLDER, get_ko_path, get_ok_path
 
-MAX_PROFILE_SEEN = 200
+MAX_PROFILE_SEEN = 400
 SLEEP_BETWEEN_AVG = 4
 PREDICTION_FOLDER = 'prediction'
 
 class Label(str, Enum):
     OK = 'ok'
     KO = 'ko'
+
+def get_train_path(profile_id, label):
+    if label == Label.OK:
+        return get_ok_path(profile_id)
+    return get_ko_path(profile_id)
 
 
 def get_infer_path(profile_id, label):
