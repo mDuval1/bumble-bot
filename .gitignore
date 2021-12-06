@@ -4,3 +4,4 @@ model/
 ml.ipynb
 .DS_Store
 __pycache__/
+window.json
